@@ -5,7 +5,8 @@ namespace APIAuction.API.Repositories;
 
 public class APIAuctionDbContext : DbContext
 {
-  public DbSet<Auction> Auctions {get; set;}
+  public DbSet<Auction> Auctions { get; set; }
+  public DbSet<User> Users { get; set; }
 
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   {
