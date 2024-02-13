@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIAuction.API.UseCases.Auctions.GetCurrent;
 
-public class GetCurrentActionUseCase
+public class GetCurrentAuctionUseCase
 {
   public Auction? Execute()
   {
