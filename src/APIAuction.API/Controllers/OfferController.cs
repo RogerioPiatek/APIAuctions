@@ -1,3 +1,4 @@
+using APIAuction.API.Communication.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIAuction.API.Controllers;
@@ -6,7 +7,7 @@ public class OfferController : APIAuctionBaseController
 {
   [HttpPost]
   [Route("{itemId}")]
-  public IActionResult CreateOffer([FromRoute] int itemId)
+  public IActionResult CreateOffer([FromRoute] int itemId, [FromBody] RequestCreateOfferJson request)
   {
     return Created();
   }
