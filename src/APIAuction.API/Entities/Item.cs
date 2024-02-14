@@ -10,6 +10,6 @@ public class Item
   public string Name {get; set;} = string.Empty;
   public string Brand {get; set;} = string.Empty;
   public Condition Condition {get; set;}
-  public int BasePrice {get; set;}
+  public decimal BasePrice {get; set;}
   public int AuctionId {get; set;}
 }    
