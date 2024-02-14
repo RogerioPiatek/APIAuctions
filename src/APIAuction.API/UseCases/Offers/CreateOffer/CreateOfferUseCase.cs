@@ -1,21 +1,24 @@
 using APIAuction.API.Communication.Requests;
+using APIAuction.API.Contracts;
 using APIAuction.API.Entities;
 using APIAuction.API.Repositories;
 using APIAuction.API.Services;
-using Microsoft.EntityFrameworkCore;
 
 namespace APIAuction.API.UseCases.Auctions.CreateOffer;
 
 public class CreateOfferUseCase
 {
     private readonly LoggedUser _loggedUser;
+    private readonly IOfferRepository _repository;
 
-    public CreateOfferUseCase(LoggedUser loggedUser) => _loggedUser = loggedUser;
+    public CreateOfferUseCase(LoggedUser loggedUser, IOfferRepository repository)
+    {
+      _loggedUser = loggedUser;
+      _repository = repository;
+    } 
 
     public int Execute(int itemId, RequestCreateOfferJson request)
   {
-    var repository = new APIAuctionDbContext();
-
     var user = _loggedUser.User();
 
     var offer = new Offer
@@ -26,9 +29,7 @@ public class CreateOfferUseCase
       CreatedOn = DateTime.Now
     };
 
-    repository.Offers.Add(offer);
-
-    repository.SaveChanges();
+    _repository.Add(offer);
 
     return offer.Id;
   }
