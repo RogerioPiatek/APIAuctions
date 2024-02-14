@@ -3,12 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{57D2C649-4B06-4C28-B591-FBF621C96F17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases.Test", "tests\UseCases.Test\UseCases.Test.csproj", "{2EAD939F-212E-44D0-AC1F-5C8D99E05F54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4F4FF33-C844-4759-8BFC-D6FF7B4B6DE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIAuction.API", "src\APIAuction.API\APIAuction.API.csproj", "{D3D2016F-1D08-4458-B836-13CFD28A90D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EAD939F-212E-44D0-AC1F-5C8D99E05F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAD939F-212E-44D0-AC1F-5C8D99E05F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAD939F-212E-44D0-AC1F-5C8D99E05F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAD939F-212E-44D0-AC1F-5C8D99E05F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3D2016F-1D08-4458-B836-13CFD28A90D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D2016F-1D08-4458-B836-13CFD28A90D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D2016F-1D08-4458-B836-13CFD28A90D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D2016F-1D08-4458-B836-13CFD28A90D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EAD939F-212E-44D0-AC1F-5C8D99E05F54} = {57D2C649-4B06-4C28-B591-FBF621C96F17}
+		{D3D2016F-1D08-4458-B836-13CFD28A90D1} = {A4F4FF33-C844-4759-8BFC-D6FF7B4B6DE7}
 	EndGlobalSection
 EndGlobal

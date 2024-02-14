@@ -56,7 +56,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddDbContext<APIAuctionDbContext>(options =>
 {
-    options.UseSqlite(@"Data Source=/home/user/Documents/auction.db");
+    options.UseSqlite(@"Data Source=/home/rogerio/Videos/leilaoDbNLW.db");
 });
 
 builder.Services.AddHttpContextAccessor();
