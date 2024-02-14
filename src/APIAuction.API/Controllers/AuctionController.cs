@@ -9,11 +9,8 @@ public class AuctionController: APIAuctionBaseController
   [HttpGet]
   [ProducesResponseType(typeof(Auction), StatusCodes.Status200OK )]
   [ProducesResponseType(StatusCodes.Status204NoContent)]
-  public IActionResult GetCurrentAuction()
+  public IActionResult GetCurrentAuction([FromServices] GetCurrentAuctionUseCase useCase)
   {
-
-    var useCase = new GetCurrentActionUseCase();
-
     var result = useCase.Execute();
 
     if(result is null)
