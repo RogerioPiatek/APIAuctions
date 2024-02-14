@@ -1,7 +1,5 @@
 using APIAuction.API.Contracts;
 using APIAuction.API.Entities;
-using APIAuction.API.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace APIAuction.API.UseCases.Auctions.GetCurrent;
 
