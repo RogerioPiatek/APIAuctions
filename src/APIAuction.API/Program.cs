@@ -47,7 +47,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddScoped<AuthenticationUserAttribute>();
-builder.Services.AddScoped<LoggedUser>();
+builder.Services.AddScoped<ILoggedUser, LoggedUser>();
 builder.Services.AddScoped<CreateOfferUseCase>();
 builder.Services.AddScoped<GetCurrentAuctionUseCase>();
 builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
@@ -56,7 +56,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddDbContext<APIAuctionDbContext>(options =>
 {
-    options.UseSqlite(@"Data Source=/home/rogerio/Videos/leilaoDbNLW.db");
+    options.UseSqlite(@"Data Source=/home/user/Documents/auction.db");
 });
 
 builder.Services.AddHttpContextAccessor();
